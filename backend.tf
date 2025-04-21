@@ -1,9 +1,10 @@
 terraform {
   required_version = ">= 1.1.0"
   backend "s3" {
-    bucket  = "my-s3-bucket-demo12345"
-    key     = "goutham/terraform.tfstate"
-    region  = "us-east-1"
-    encrypt = true
+    bucket         = "2-tier-architecture-modules"
+    key            = "tf/state5"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "2-tier-architecture-modules-table"
   }
 }
